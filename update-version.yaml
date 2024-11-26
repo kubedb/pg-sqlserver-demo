@@ -1,0 +1,13 @@
+apiVersion: ops.kubedb.com/v1alpha1
+kind: PostgresOpsRequest
+metadata:
+  name: update-version
+  namespace: demo
+spec:
+  timeout: 1h
+  type: UpdateVersion
+  updateVersion:
+    targetVersion: "16.1-alpine-tds-fdw"
+  databaseRef: 
+    name: ha-postgres
+  apply: Always
