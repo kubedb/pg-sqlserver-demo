@@ -4,7 +4,7 @@ metadata:
   name: update-version
   namespace: demo
 spec:
-  timeout: 1h
+  timeout: 20m
   type: UpdateVersion
   updateVersion:
     targetVersion: "16.1-alpine-tds-fdw"
