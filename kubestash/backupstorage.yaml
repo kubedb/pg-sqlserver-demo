@@ -1,9 +1,3 @@
-
-# kubectl create secret generic -n demo gcs-secret \
-#   --from-literal=RESTIC_PASSWORD=12345 \
-#   --from-literal=GOOGLE_PROJECT_ID=appscode-testing \
-#   --from-file=./GOOGLE_SERVICE_ACCOUNT_JSON_KEY
----
 apiVersion: storage.kubestash.com/v1alpha1
 kind: BackupStorage
 metadata:
@@ -13,11 +7,10 @@ spec:
   storage:
     provider: gcs
     gcs:
-      bucket: kubestash-qa
-      prefix: ramdor-demo
-      secretName: gcs-secret
+      bucket: saurov
+      prefix: archiver
+      secretName: gcs-secret 
   usagePolicy:
     allowedNamespaces:
       from: All
-  default: true
-  deletionPolicy: Delete
+  deletionPolicy: WipeOut

@@ -13,7 +13,7 @@ spec:
         - Sales
   tls:
     issuerRef:
-      name: pg-issuer
+      name: db-issuer
       kind: Issuer
       apiGroup: "cert-manager.io"
     clientTLS: false

@@ -21,5 +21,5 @@ spec:
     issuerRef:
       apiGroup: cert-manager.io
       kind: Issuer
-      name: pg-issuer
+      name: db-issuer
 
