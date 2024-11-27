@@ -1,4 +1,6 @@
 --- mssqlsever
+/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "pvbP5JUkSlQbk5Ap"
+
 CREATE DATABASE Sales
 GO
 USE [SALES]

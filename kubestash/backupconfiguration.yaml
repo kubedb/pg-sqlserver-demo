@@ -20,7 +20,7 @@ spec:
   sessions:
     - name: frequent-backup
       scheduler:
-        schedule: "*/5 * * * *"
+        schedule: "*/10 * * * *"
         jobTemplate:
           backoffLimit: 1
       repositories:
