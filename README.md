@@ -1,4 +1,4 @@
-# top-ramdor-demo
+# pg-sqlserver-demo
 
 1) Apply the versions (catalog)
 2) Create databases
