@@ -4,6 +4,7 @@ metadata:
   name: pgops-reconfigure-config
   namespace: demo
 spec:
+  timeout: 20m
   type: Reconfigure
   databaseRef:
     name: ha-postgres

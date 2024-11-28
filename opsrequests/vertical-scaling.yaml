@@ -5,6 +5,7 @@ metadata:
   namespace: demo
 spec:
   type: VerticalScaling
+  timeout: 20m
   databaseRef:
     name: ha-postgres
   verticalScaling:
