@@ -11,5 +11,5 @@ spec:
     postgres:
       resources: 
         requests:
-          memory: "1Gi"
+          memory: "1.5Gi"
           cpu: "1"
