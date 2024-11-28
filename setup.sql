@@ -1,5 +1,5 @@
 --- mssqlsever
-/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "pvbP5JUkSlQbk5Ap"
+/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "87nJvXHXHSU6zPeb"
 
 CREATE DATABASE Sales
 GO
@@ -24,7 +24,7 @@ SELECT oid, extname, extversion FROM pg_extension;
 CREATE SERVER mssql_svr FOREIGN DATA WRAPPER tds_fdw OPTIONS (servername 'ramdor-mssql.demo.svc', port '1433', database 'sales', tds_version '7.1');
 
 --- change the password with the server password
-CREATE USER MAPPING FOR postgres SERVER mssql_svr  OPTIONS (username 'sa', password 'ifia0aiTTJsrMHHi');
+CREATE USER MAPPING FOR postgres SERVER mssql_svr  OPTIONS (username 'sa', password '87nJvXHXHSU6zPeb');
 
 CREATE FOREIGN TABLE tds (
  id integer,
