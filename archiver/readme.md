@@ -24,6 +24,9 @@ kubectl apply -f https://raw.githubusercontent.com/kubestash/apimachinery/refs/h
 
 kubectl -n kubedb set image deployment/kubedb-kubedb-provisioner operator=arnobkumarsaha/kubedb-provisioner:v0.49.0_linux_amd64
 
+## Update function
+
+kubectl patch Function postgres-csi-snapshotter --type='json' -p='[{"op": "replace", "path": "/spec/image", "value": "arnobkumarsaha/postgres-csi-snapshotter-plugin:fix-time_linux_amd64"}]'
 
 ## Update the catalog resources
 
