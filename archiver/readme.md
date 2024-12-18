@@ -1,3 +1,13 @@
+# Goal of this blog 
+Pitr process with new incremental snapshot changes to support latest point in time recovery using below fields.
+```yaml
+status:
+  components:
+    wal:
+      logStats:
+        end: "2024-12-18T07:24:45.483001Z"
+        lsn: 0/160D87D8
+```
 ## Kubestash release v2024.12.9
 
 ```
@@ -21,8 +31,10 @@ https://raw.githubusercontent.com/kubedb/pg-sqlserver-demo/refs/heads/archiver-d
 
 https://github.com/kubedb/pg-sqlserver-demo/blob/archiver-demo/archiver/catalog-16.1-tds-fdw.yaml
 
-## Create database with archiver:true labels and wait untill db get ready
+## Now we can follow normal pitr process
 
+### Create database with archiver:true labels and wait untill db get ready
+Once database is ready,
 Exec into primary pod and insert some data
 ```bash
 kubectl exec -it -n demo ha-postgres-0 -- bash
