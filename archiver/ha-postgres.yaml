@@ -1,0 +1,22 @@
+apiVersion: kubedb.com/v1
+kind: Postgres
+metadata:
+  name: ha-postgres
+  namespace: demo
+  labels:
+    archiver: "true"
+spec:
+  version: "15.5-alpine-tds-fdw"
+  replicas: 3
+  standbyMode: Hot
+  storageType: Durable
+  storage:
+    # storageClassName: "linode-block-storage"
+    accessModes:
+      - ReadWriteOnce
+    resources:
+      requests:
+        storage: 5Gi
+  deletionPolicy: WipeOut
+  clientAuthMode: md5
+
